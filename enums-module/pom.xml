@@ -39,5 +39,6 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>enumsmodule</finalName>
     </build>
 </project>
