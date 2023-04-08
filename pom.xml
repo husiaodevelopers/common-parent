@@ -83,6 +83,7 @@
     <modules>
         <module>ccu-tra-base</module>
         <module>enums-module</module>
+        <module>redis-module</module>
 
     </modules>
 </project>
