@@ -64,9 +64,19 @@ public class RedisUtils {
      * @param key 缓存键
      * @return 缓存值
      */
-    public Object get(String key) {
-        return redisTemplate.opsForValue().get(key);
+    public String get(String key) {
+        try {
+            Object value = redisTemplate.opsForValue().get(key);
+            if (value == null) {
+                return null;
+            } else {
+                return value.toString();
+            }
+        } catch (NullPointerException e) {
+            return null;
+        }
     }
+
 
     /**
      * 删除缓存
